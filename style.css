@@ -1,0 +1,98 @@
+:root {
+    --font-family: "Work Sans", sans-serif;
+
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: normal;
+
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+.svg-bg {
+    top: 0;
+}
+
+/* APP */
+
+.app {
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat;
+    display: grid;
+    place-items: center;
+    background-color: var(--light-pink);
+    min-height: calc(100vh - 14px);
+}
+
+.faq {
+    background-color: var(--white);
+    max-width: 600px;
+    padding: 32px;
+    border-radius: 14px;
+    display: grid;
+    row-gap: 24px;
+    margin: 100px auto;
+}
+
+@media screen and (max-width: 600px) {
+    .faq {
+        margin: 100px 1rem;
+    }
+}
+
+.faq__title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: var(--dark-purple);
+}
+
+.faq__title {
+    font-size: 1.4rem;
+}
+
+.faq__accordion-row {
+    position: relative;
+    border-bottom: 1px solid var(--light-pink);
+}
+
+.faq__accordion-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 0;
+    cursor: pointer;
+    color: var(--dark-purple);
+    transition: color 200ms ease;
+}
+
+.faq__accordion-label:hover {
+    color: #AD28EB;
+}
+
+.faq__accordion-content {
+    margin: 12px 0;
+    line-height: 1.4;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-in-out;
+    color: var(--grayish-purple);
+}
+
+.faq__accordion-content.active {
+    max-height: 500px;
+}
