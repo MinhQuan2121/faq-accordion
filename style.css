@@ -84,6 +84,10 @@ ol, ul {
     color: #AD28EB;
 }
 
+.faq__accordion-label img {
+    margin-left: 2px;
+}
+
 .faq__accordion-content {
     margin: 12px 0;
     line-height: 1.4;
